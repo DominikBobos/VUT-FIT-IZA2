@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A30428AB246B6222008E104C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428AA246B6222008E104C /* AppDelegate.swift */; };
+		A30428AD246B6222008E104C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428AC246B6222008E104C /* ViewController.swift */; };
+		A30428B0246B6222008E104C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30428AE246B6222008E104C /* Main.storyboard */; };
+		A30428B3246B6222008E104C /* MedPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A30428B1246B6222008E104C /* MedPlanner.xcdatamodeld */; };
+		A30428B5246B6228008E104C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30428B4246B6228008E104C /* Assets.xcassets */; };
+		A30428B8246B6228008E104C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30428B6246B6228008E104C /* LaunchScreen.storyboard */; };
+		A30428C3246B6229008E104C /* MedPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428C2246B6229008E104C /* MedPlannerTests.swift */; };
+		A30428CE246B6229008E104C /* MedPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428CD246B6229008E104C /* MedPlannerUITests.swift */; };
+		A30428E0246B6801008E104C /* PillsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428DF246B6801008E104C /* PillsTableViewController.swift */; };
+		A30428E2246B6CB6008E104C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428E1246B6CB6008E104C /* SettingsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A30428BF246B6229008E104C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A304289F246B6222008E104C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A30428A6246B6222008E104C;
+			remoteInfo = MedPlanner;
+		};
+		A30428CA246B6229008E104C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A304289F246B6222008E104C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A30428A6246B6222008E104C;
+			remoteInfo = MedPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A30428A7246B6222008E104C /* MedPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30428AA246B6222008E104C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A30428AC246B6222008E104C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A30428AF246B6222008E104C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A30428B2246B6222008E104C /* MedPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MedPlanner.xcdatamodel; sourceTree = "<group>"; };
+		A30428B4246B6228008E104C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A30428B7246B6228008E104C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A30428B9246B6228008E104C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A30428BE246B6229008E104C /* MedPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30428C2246B6229008E104C /* MedPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedPlannerTests.swift; sourceTree = "<group>"; };
+		A30428C4246B6229008E104C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A30428C9246B6229008E104C /* MedPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30428CD246B6229008E104C /* MedPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedPlannerUITests.swift; sourceTree = "<group>"; };
+		A30428CF246B6229008E104C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A30428DF246B6801008E104C /* PillsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillsTableViewController.swift; sourceTree = "<group>"; };
+		A30428E1246B6CB6008E104C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30428A4246B6222008E104C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30428BB246B6229008E104C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30428C6246B6229008E104C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A304289E246B6222008E104C = {
+			isa = PBXGroup;
+			children = (
+				A30428A9246B6222008E104C /* MedPlanner */,
+				A30428C1246B6229008E104C /* MedPlannerTests */,
+				A30428CC246B6229008E104C /* MedPlannerUITests */,
+				A30428A8246B6222008E104C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A30428A8246B6222008E104C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30428A7246B6222008E104C /* MedPlanner.app */,
+				A30428BE246B6229008E104C /* MedPlannerTests.xctest */,
+				A30428C9246B6229008E104C /* MedPlannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A30428A9246B6222008E104C /* MedPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				A30428AA246B6222008E104C /* AppDelegate.swift */,
+				A30428AC246B6222008E104C /* ViewController.swift */,
+				A30428AE246B6222008E104C /* Main.storyboard */,
+				A30428E1246B6CB6008E104C /* SettingsViewController.swift */,
+				A30428DF246B6801008E104C /* PillsTableViewController.swift */,
+				A30428B4246B6228008E104C /* Assets.xcassets */,
+				A30428B6246B6228008E104C /* LaunchScreen.storyboard */,
+				A30428B9246B6228008E104C /* Info.plist */,
+				A30428B1246B6222008E104C /* MedPlanner.xcdatamodeld */,
+			);
+			path = MedPlanner;
+			sourceTree = "<group>";
+		};
+		A30428C1246B6229008E104C /* MedPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A30428C2246B6229008E104C /* MedPlannerTests.swift */,
+				A30428C4246B6229008E104C /* Info.plist */,
+			);
+			path = MedPlannerTests;
+			sourceTree = "<group>";
+		};
+		A30428CC246B6229008E104C /* MedPlannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A30428CD246B6229008E104C /* MedPlannerUITests.swift */,
+				A30428CF246B6229008E104C /* Info.plist */,
+			);
+			path = MedPlannerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A30428A6246B6222008E104C /* MedPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A30428D2246B6229008E104C /* Build configuration list for PBXNativeTarget "MedPlanner" */;
+			buildPhases = (
+				A30428A3246B6222008E104C /* Sources */,
+				A30428A4246B6222008E104C /* Frameworks */,
+				A30428A5246B6222008E104C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedPlanner;
+			productName = MedPlanner;
+			productReference = A30428A7246B6222008E104C /* MedPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A30428BD246B6229008E104C /* MedPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A30428D5246B6229008E104C /* Build configuration list for PBXNativeTarget "MedPlannerTests" */;
+			buildPhases = (
+				A30428BA246B6229008E104C /* Sources */,
+				A30428BB246B6229008E104C /* Frameworks */,
+				A30428BC246B6229008E104C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A30428C0246B6229008E104C /* PBXTargetDependency */,
+			);
+			name = MedPlannerTests;
+			productName = MedPlannerTests;
+			productReference = A30428BE246B6229008E104C /* MedPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A30428C8246B6229008E104C /* MedPlannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A30428D8246B6229008E104C /* Build configuration list for PBXNativeTarget "MedPlannerUITests" */;
+			buildPhases = (
+				A30428C5246B6229008E104C /* Sources */,
+				A30428C6246B6229008E104C /* Frameworks */,
+				A30428C7246B6229008E104C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A30428CB246B6229008E104C /* PBXTargetDependency */,
+			);
+			name = MedPlannerUITests;
+			productName = MedPlannerUITests;
+			productReference = A30428C9246B6229008E104C /* MedPlannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A304289F246B6222008E104C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Dominik Boboš";
+				TargetAttributes = {
+					A30428A6246B6222008E104C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					A30428BD246B6229008E104C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A30428A6246B6222008E104C;
+					};
+					A30428C8246B6229008E104C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A30428A6246B6222008E104C;
+					};
+				};
+			};
+			buildConfigurationList = A30428A2246B6222008E104C /* Build configuration list for PBXProject "MedPlanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A304289E246B6222008E104C;
+			productRefGroup = A30428A8246B6222008E104C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A30428A6246B6222008E104C /* MedPlanner */,
+				A30428BD246B6229008E104C /* MedPlannerTests */,
+				A30428C8246B6229008E104C /* MedPlannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A30428A5246B6222008E104C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30428B8246B6228008E104C /* LaunchScreen.storyboard in Resources */,
+				A30428B5246B6228008E104C /* Assets.xcassets in Resources */,
+				A30428B0246B6222008E104C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30428BC246B6229008E104C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30428C7246B6229008E104C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A30428A3246B6222008E104C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30428E0246B6801008E104C /* PillsTableViewController.swift in Sources */,
+				A30428B3246B6222008E104C /* MedPlanner.xcdatamodeld in Sources */,
+				A30428AD246B6222008E104C /* ViewController.swift in Sources */,
+				A30428E2246B6CB6008E104C /* SettingsViewController.swift in Sources */,
+				A30428AB246B6222008E104C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30428BA246B6229008E104C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30428C3246B6229008E104C /* MedPlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30428C5246B6229008E104C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30428CE246B6229008E104C /* MedPlannerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A30428C0246B6229008E104C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A30428A6246B6222008E104C /* MedPlanner */;
+			targetProxy = A30428BF246B6229008E104C /* PBXContainerItemProxy */;
+		};
+		A30428CB246B6229008E104C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A30428A6246B6222008E104C /* MedPlanner */;
+			targetProxy = A30428CA246B6229008E104C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A30428AE246B6222008E104C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A30428AF246B6222008E104C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A30428B6246B6228008E104C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A30428B7246B6228008E104C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A30428D0246B6229008E104C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A30428D1246B6229008E104C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A30428D3246B6229008E104C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MedPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A30428D4246B6229008E104C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MedPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A30428D6246B6229008E104C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MedPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedPlanner.app/MedPlanner";
+			};
+			name = Debug;
+		};
+		A30428D7246B6229008E104C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MedPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedPlanner.app/MedPlanner";
+			};
+			name = Release;
+		};
+		A30428D9246B6229008E104C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MedPlannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MedPlanner;
+			};
+			name = Debug;
+		};
+		A30428DA246B6229008E104C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MedPlannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MedPlanner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A30428A2246B6222008E104C /* Build configuration list for PBXProject "MedPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30428D0246B6229008E104C /* Debug */,
+				A30428D1246B6229008E104C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A30428D2246B6229008E104C /* Build configuration list for PBXNativeTarget "MedPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30428D3246B6229008E104C /* Debug */,
+				A30428D4246B6229008E104C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A30428D5246B6229008E104C /* Build configuration list for PBXNativeTarget "MedPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30428D6246B6229008E104C /* Debug */,
+				A30428D7246B6229008E104C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A30428D8246B6229008E104C /* Build configuration list for PBXNativeTarget "MedPlannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30428D9246B6229008E104C /* Debug */,
+				A30428DA246B6229008E104C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A30428B1246B6222008E104C /* MedPlanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A30428B2246B6222008E104C /* MedPlanner.xcdatamodel */,
+			);
+			currentVersion = A30428B2246B6222008E104C /* MedPlanner.xcdatamodel */;
+			path = MedPlanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A304289F246B6222008E104C /* Project object */;
+}
