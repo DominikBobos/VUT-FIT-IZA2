@@ -17,6 +17,10 @@
 		A30428CE246B6229008E104C /* MedPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428CD246B6229008E104C /* MedPlannerUITests.swift */; };
 		A30428E0246B6801008E104C /* PillsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428DF246B6801008E104C /* PillsTableViewController.swift */; };
 		A30428E2246B6CB6008E104C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428E1246B6CB6008E104C /* SettingsViewController.swift */; };
+		A38E6747246C488F001E6E98 /* Pill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E6746246C488F001E6E98 /* Pill.swift */; };
+		A38E6749246C4E27001E6E98 /* images in Resources */ = {isa = PBXBuildFile; fileRef = A38E6748246C4E26001E6E98 /* images */; };
+		A38E674B246C7D0F001E6E98 /* PillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E674A246C7D0F001E6E98 /* PillDetailViewController.swift */; };
+		A38E674D246C81AC001E6E98 /* PillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E674C246C81AC001E6E98 /* PillTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		A30428CF246B6229008E104C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30428DF246B6801008E104C /* PillsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillsTableViewController.swift; sourceTree = "<group>"; };
 		A30428E1246B6CB6008E104C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A38E6746246C488F001E6E98 /* Pill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill.swift; sourceTree = "<group>"; };
+		A38E6748246C4E26001E6E98 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		A38E674A246C7D0F001E6E98 /* PillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillDetailViewController.swift; sourceTree = "<group>"; };
+		A38E674C246C81AC001E6E98 /* PillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +111,19 @@
 		A30428A9246B6222008E104C /* MedPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				A38E6748246C4E26001E6E98 /* images */,
 				A30428AA246B6222008E104C /* AppDelegate.swift */,
 				A30428AC246B6222008E104C /* ViewController.swift */,
 				A30428AE246B6222008E104C /* Main.storyboard */,
-				A30428E1246B6CB6008E104C /* SettingsViewController.swift */,
-				A30428DF246B6801008E104C /* PillsTableViewController.swift */,
 				A30428B4246B6228008E104C /* Assets.xcassets */,
 				A30428B6246B6228008E104C /* LaunchScreen.storyboard */,
 				A30428B9246B6228008E104C /* Info.plist */,
 				A30428B1246B6222008E104C /* MedPlanner.xcdatamodeld */,
+				A38E6746246C488F001E6E98 /* Pill.swift */,
+				A30428DF246B6801008E104C /* PillsTableViewController.swift */,
+				A38E674A246C7D0F001E6E98 /* PillDetailViewController.swift */,
+				A38E674C246C81AC001E6E98 /* PillTableViewCell.swift */,
+				A30428E1246B6CB6008E104C /* SettingsViewController.swift */,
 			);
 			path = MedPlanner;
 			sourceTree = "<group>";
@@ -238,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38E6749246C4E27001E6E98 /* images in Resources */,
 				A30428B8246B6228008E104C /* LaunchScreen.storyboard in Resources */,
 				A30428B5246B6228008E104C /* Assets.xcassets in Resources */,
 				A30428B0246B6222008E104C /* Main.storyboard in Resources */,
@@ -265,10 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38E6747246C488F001E6E98 /* Pill.swift in Sources */,
 				A30428E0246B6801008E104C /* PillsTableViewController.swift in Sources */,
 				A30428B3246B6222008E104C /* MedPlanner.xcdatamodeld in Sources */,
 				A30428AD246B6222008E104C /* ViewController.swift in Sources */,
+				A38E674B246C7D0F001E6E98 /* PillDetailViewController.swift in Sources */,
 				A30428E2246B6CB6008E104C /* SettingsViewController.swift in Sources */,
+				A38E674D246C81AC001E6E98 /* PillTableViewCell.swift in Sources */,
 				A30428AB246B6222008E104C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +398,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
 			name = Debug;
 		};
@@ -436,6 +453,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -453,7 +471,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,7 +489,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
