@@ -5,7 +5,7 @@
 //  Created by Dominik Boboš on 13.5.20.
 //  Copyright © 2020 Dominik Boboš. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 class PillTableViewCell: UITableViewCell {

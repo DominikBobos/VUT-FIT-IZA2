@@ -18,11 +18,11 @@ class PillDetailViewController: UITableViewController {
 //    @IBOutlet var Start: UITextField!
 //    @IBOutlet var End: UITextField!
 //    @IBOutlet var When: UITextField!
-    @IBOutlet weak var PillImage: UIImageView!
-    @IBOutlet weak var Name: UITextField!
-    @IBOutlet weak var Start: UITextField!
-    @IBOutlet weak var End: UITextField!
-    @IBOutlet weak var When: UITextField!
+    @IBOutlet  var PillImage: UIImageView!
+    @IBOutlet var Name: UITextField!
+    @IBOutlet var Start: UITextField!
+    @IBOutlet var End: UITextField!
+    @IBOutlet var When: UITextField!
     
     //    @IBOutlet var PillImage: UIImageView!
 //    @IBOutlet var Name: UITextField!
@@ -58,6 +58,9 @@ class PillDetailViewController: UITableViewController {
         
         PillImage.image = pill.showImage
         Name.text = pill.name
+        Start.text = pill.dateBegin
+        End.text = pill.dateEnd
+        When.text = pill.whenTake
         
         let _back = UIBarButtonItem(barButtonSystemItem: .save,
                                     target: self,
