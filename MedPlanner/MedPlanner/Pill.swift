@@ -20,10 +20,10 @@ enum PillState{
 // Pill je castou modelu. Negeneruje ziadne udalosti
 class Pill {
     
-    var name: String               //nazov lieku
-    var dateBegin: Date             // pociatocny datum uzivania
-    var dateEnd: Date               // konecny datum uzivania
-    var whenTake: Date              // kedy je potrebne liek uzit
+    var name: String                //nazov lieku
+    var dateBegin: String             // pociatocny datum uzivania
+    var dateEnd: String               // konecny datum uzivania
+    var whenTake: String              // kedy je potrebne liek uzit
     var state: PillState = .newPill
     let pillImage: UIImage? = nil   // tvar a typ lieku
     
@@ -38,9 +38,9 @@ class Pill {
     // CONSTRUCTORS:
         //novy zadany liek
     init(newPill name: String,
-         start dateBegin: Date,
-         end dateEnd: Date,
-         when whenTake: Date)
+         start dateBegin: String,
+         end dateEnd: String,
+         when whenTake: String)
     {
         self.state = .newPill
         self.name = name
@@ -48,19 +48,19 @@ class Pill {
         self.dateEnd = dateEnd
         self.whenTake = whenTake
     }
-//        //liek nacitany z DB
-//    init(dbPill name: String,
-//         dateBegin: Date,
-//         dateEnd: Date,
-//         whenTake: DateComponents,
-//         state: PillState)
-//    {
-//        self.state = state
-//        self.name = name
-//        self.dateBegin = dateBegin
-//        self.dateEnd = dateEnd
-//        self.whenTake = whenTake
-//    }
+        //liek nacitany z DB
+    init(dbPill name: String,
+         dateBegin: String,
+         dateEnd: String,
+         whenTake: String,
+         state: PillState)
+    {
+        self.state = state
+        self.name = name
+        self.dateBegin = dateBegin
+        self.dateEnd = dateEnd
+        self.whenTake = whenTake
+    }
     
     
 }

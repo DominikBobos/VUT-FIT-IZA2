@@ -21,6 +21,8 @@
 		A38E6749246C4E27001E6E98 /* images in Resources */ = {isa = PBXBuildFile; fileRef = A38E6748246C4E26001E6E98 /* images */; };
 		A38E674B246C7D0F001E6E98 /* PillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E674A246C7D0F001E6E98 /* PillDetailViewController.swift */; };
 		A38E674D246C81AC001E6E98 /* PillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E674C246C81AC001E6E98 /* PillTableViewCell.swift */; };
+		A3B510C6246E736500C3F633 /* PillsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B510C5246E736500C3F633 /* PillsData.swift */; };
+		A3B510C8246E778E00C3F633 /* PillDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B510C7246E778E00C3F633 /* PillDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		A38E6748246C4E26001E6E98 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		A38E674A246C7D0F001E6E98 /* PillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillDetailViewController.swift; sourceTree = "<group>"; };
 		A38E674C246C81AC001E6E98 /* PillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTableViewCell.swift; sourceTree = "<group>"; };
+		A3B510C5246E736500C3F633 /* PillsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillsData.swift; sourceTree = "<group>"; };
+		A3B510C7246E778E00C3F633 /* PillDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				A38E674A246C7D0F001E6E98 /* PillDetailViewController.swift */,
 				A38E674C246C81AC001E6E98 /* PillTableViewCell.swift */,
 				A30428E1246B6CB6008E104C /* SettingsViewController.swift */,
+				A3B510C5246E736500C3F633 /* PillsData.swift */,
+				A3B510C7246E778E00C3F633 /* PillDatabase.swift */,
 			);
 			path = MedPlanner;
 			sourceTree = "<group>";
@@ -209,7 +215,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Dominik Boboš";
 				TargetAttributes = {
 					A30428A6246B6222008E104C = {
@@ -280,12 +286,14 @@
 			files = (
 				A38E6747246C488F001E6E98 /* Pill.swift in Sources */,
 				A30428E0246B6801008E104C /* PillsTableViewController.swift in Sources */,
+				A3B510C6246E736500C3F633 /* PillsData.swift in Sources */,
 				A30428B3246B6222008E104C /* MedPlanner.xcdatamodeld in Sources */,
 				A30428AD246B6222008E104C /* ViewController.swift in Sources */,
 				A38E674B246C7D0F001E6E98 /* PillDetailViewController.swift in Sources */,
 				A30428E2246B6CB6008E104C /* SettingsViewController.swift in Sources */,
 				A38E674D246C81AC001E6E98 /* PillTableViewCell.swift in Sources */,
 				A30428AB246B6222008E104C /* AppDelegate.swift in Sources */,
+				A3B510C8246E778E00C3F633 /* PillDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +406,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
 			name = Debug;
 		};
@@ -453,7 +460,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -471,7 +477,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -489,7 +494,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = IZA.MedPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

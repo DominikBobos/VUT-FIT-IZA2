@@ -8,49 +8,54 @@
 
 import UIKit
 
-class PillsTableViewController: UITableViewController {
+class PillsTableViewController: UITableViewController, PillsDSDelegate {
 
-    var medications: [Pill] = []
+    var medications: [PillsDataSource] = []
+    
+    func pill(atIndexPath: IndexPath) -> Pill {
+        return medications[atIndexPath.section][atIndexPath.row]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        medications = createArray()
+        medications.append(PillsDataSource.All(delegate: self, section: 0))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    func createArray() -> [Pill] {
-        var tempList: [Pill] = []
-        let exampleDate = Date.init()
-        let pill1 = Pill(newPill: "Paralen", start: exampleDate, end: exampleDate, when: exampleDate)
-        
-        tempList.append(pill1)
-        
-        return tempList
+    
+    func reloadFrom(pillsDS: PillsDataSource) {
+        tableView.reloadData()
     }
     
-
+    func updateFrom(pillsDS: PillsDataSource, onPill: Pill) {
+        tableView.reloadSections(IndexSet(integer: pillsDS.section),
+                                 with: .automatic)
+    }
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return medications.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Pill"
+    }
+
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        // #warning Incomplete implementation, return the number of rows
 //        return 1
 //    }
 //
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let pill = medications[indexPath.row]
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "PillCell", for: indexPath)
-//        return cell
-//        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PillCell") as! PillTableViewCell
+        cell.setPill(pill(atIndexPath: indexPath))
+        return cell
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    }
     
     
     /*
@@ -103,42 +108,24 @@ class PillsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //     Get the new view controller using segue.destination.
-     //    Pass the selected object to the new view controller.
-//        if segue.identifier == "bookDetail",
-//            let _dest = segue.destination as? PillDetailViewController,
-//            let _selRow = tableView.indexPathForSelectedRow
-//        {
-//            //
-//            _dest.pill = pill(atIndexPath: _selRow)
-//        }
-//        
+//         Get the new view controller using segue.destination.
+//         Pass the selected object to the new view controller.
+        if segue.identifier == "pillDetail",
+            let _dest = segue.destination as? PillDetailViewController,
+            let _selRow = tableView.indexPathForSelectedRow
+        {
+            //
+            _dest.pill = pill(atIndexPath: _selRow)
+        }
+        
         if segue.identifier == "addNew",
             let _dest = segue.destination as? PillDetailViewController
         {
             //
-            let tempDate = Date.init()
-            _dest.pill = Pill(newPill: "", start: tempDate, end: tempDate, when: tempDate)
+            _dest.pill = Pill(newPill: "", start: "", end: "", when: "")
         }
     }
  
 
 }
 
-
-
-extension PillsTableViewController{ //: UITableViewDataSource, UITableViewDelegate {
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return medications.count
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let pill = medications[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PillCell") as! PillTableViewCell
-        cell.setPill(pill)
-        
-        return cell
-    }
-}

@@ -13,9 +13,12 @@ class PillTableViewCell: UITableViewCell {
     private weak var pill: Pill?
     
     //
+    @IBOutlet var PillImage: UIImageView!
     @IBOutlet var Name: UILabel!
     @IBOutlet var When: UILabel!
-    @IBOutlet var PillImage: UIImageView!
+    //    @IBOutlet var Name: UILabel!
+//    @IBOutlet var When: UILabel!
+//    @IBOutlet var PillImage: UIImageView!
     
     //
     override func prepareForReuse() {
@@ -35,7 +38,7 @@ class PillTableViewCell: UITableViewCell {
     private func selfConfig() {
         //
         Name.text = pill!.name
-        When.text = String(stringInterpolationSegment: pill!.whenTake)
+        When.text = pill!.whenTake
         
         //
         PillImage.image = pill!.showImage

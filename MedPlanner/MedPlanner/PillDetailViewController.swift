@@ -5,7 +5,7 @@
 //  Created by Dominik Boboš on 13.5.20.
 //  Copyright © 2020 Dominik Boboš. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 class PillDetailViewController: UITableViewController {
@@ -13,9 +13,16 @@ class PillDetailViewController: UITableViewController {
     var pill: Pill!
     
     //
-    @IBOutlet var Name: UITextField!
-    @IBOutlet var PillImage: UIImageView!
-    
+//    @IBOutlet var PillImage: UIImageView!
+//    @IBOutlet var Name: UITextField!
+//    @IBOutlet var Start: UITextField!
+//    @IBOutlet var End: UITextField!
+//    @IBOutlet var When: UITextField!
+    @IBOutlet weak var PillImage: UIImageView!
+    @IBOutlet weak var Name: UITextField!
+    @IBOutlet weak var Start: UITextField!
+    @IBOutlet weak var End: UITextField!
+    @IBOutlet weak var When: UITextField!
     
     //    @IBOutlet var PillImage: UIImageView!
 //    @IBOutlet var Name: UITextField!
@@ -27,14 +34,23 @@ class PillDetailViewController: UITableViewController {
     // aktualizuje obsah objektu a notifikuje DB o zmene objektu
     func updateModel() {
         //
-        if let _name = Name.text { //, let _when = When {
+        if let _name = Name.text, let _start = Start.text,
+            let _end = End.text, let _when = When.text {
             //
             pill.name = _name
-//            pill.whenTake =
+            pill.dateBegin = _start
+            pill.dateEnd = _end
+            pill.whenTake = _when
             
             //
-//            AppDelegate.shared.booksDB.updated(aBook: book)
+            AppDelegate.shared.pillsDatabase.updated(setNew: pill)
         }
+    }
+    
+    @objc func backButton(_ sender: Any) {
+        updateModel()
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
@@ -43,7 +59,11 @@ class PillDetailViewController: UITableViewController {
         PillImage.image = pill.showImage
         Name.text = pill.name
         
-
+        let _back = UIBarButtonItem(barButtonSystemItem: .save,
+                                    target: self,
+                                    action: #selector(PillDetailViewController.backButton(_:)))
+        
+        navigationItem.leftBarButtonItem = _back
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,15 +73,15 @@ class PillDetailViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
