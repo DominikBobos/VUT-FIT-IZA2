@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19A471t" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Medications" representedClassName=".Medications" syncable="YES">
+        <attribute name="dateBegin" attributeType="String"/>
+        <attribute name="dateEnd" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="whenTake" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Medications" positionX="-63" positionY="-18" width="128" height="103"/>
+    </elements>
 </model>

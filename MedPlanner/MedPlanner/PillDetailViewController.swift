@@ -10,37 +10,47 @@ import UIKit
 
 class PillDetailViewController: UITableViewController {
 
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var pill: Pill!
     
-    //
-//    @IBOutlet var PillImage: UIImageView!
-//    @IBOutlet var Name: UITextField!
-//    @IBOutlet var Start: UITextField!
-//    @IBOutlet var End: UITextField!
-//    @IBOutlet var When: UITextField!
-    @IBOutlet  var PillImage: UIImageView!
+    
+    @IBOutlet var PillImage: UIImageView!
     @IBOutlet var Name: UITextField!
     @IBOutlet var Start: UITextField!
     @IBOutlet var End: UITextField!
     @IBOutlet var When: UITextField!
+    @IBOutlet var State: UISwitch!
     
-    //    @IBOutlet var PillImage: UIImageView!
-//    @IBOutlet var Name: UITextField!
-//    @IBOutlet var Start: UIDatePicker!
-//    @IBOutlet var End: UIDatePicker!
-//    @IBOutlet var When: UIDatePicker!
-    
+ 
     // ----------------------------------------------------------------
     // aktualizuje obsah objektu a notifikuje DB o zmene objektu
     func updateModel() {
         //
         if let _name = Name.text, let _start = Start.text,
-            let _end = End.text, let _when = When.text {
+            let _end = End.text, let _when = When.text{//}, let _state = State {
             //
             pill.name = _name
             pill.dateBegin = _start
             pill.dateEnd = _end
             pill.whenTake = _when
+            
+            let fkinSwift = Medications(entity: Medications.entity(), insertInto: context)
+            fkinSwift.name = _name
+            fkinSwift.dateBegin = _start
+            fkinSwift.dateEnd = _end
+            fkinSwift.whenTake = _when
+            appDelegate.saveContext()
+            do  {
+                try context.save()
+            } catch {
+                print ("Failed saving data")
+            }
+//            if (_state.isOn) {
+//                pill.state = .inUse
+//            } else {
+//                pill.state = .notInUse
+//            }
             
             //
             AppDelegate.shared.pillsDatabase.updated(setNew: pill)
@@ -49,7 +59,6 @@ class PillDetailViewController: UITableViewController {
     
     @objc func backButton(_ sender: Any) {
         updateModel()
-        
         self.navigationController?.popViewController(animated: true)
     }
     

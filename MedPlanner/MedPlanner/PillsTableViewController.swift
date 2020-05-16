@@ -9,8 +9,12 @@
 import UIKit
 
 class PillsTableViewController: UITableViewController, PillsDSDelegate {
-
+//    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    var fuckingSwift = [Medications]()
+    
     var medications: [PillsDataSource] = []
+    
     
     func pill(atIndexPath: IndexPath) -> Pill {
         return medications[atIndexPath.section][atIndexPath.row]
@@ -26,6 +30,15 @@ class PillsTableViewController: UITableViewController, PillsDSDelegate {
     }
     
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        do {
+//            fuckingSwift = try context.fetch(Medications.fetchRequest())
+//        } catch let error as NSError {
+//            print ("Could not fetch. \(error), \(error.userInfo)")
+//        }
+//    }
+    
     func reloadFrom(pillsDS: PillsDataSource) {
         tableView.reloadData()
     }
@@ -34,6 +47,20 @@ class PillsTableViewController: UITableViewController, PillsDSDelegate {
         tableView.reloadSections(IndexSet(integer: pillsDS.section),
                                  with: .automatic)
     }
+    
+//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//
+//            medications.remove(at: indexPath.row)
+//            tableView.beginUpdates()
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//            tableView.endUpdates()
+//        }
+//    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -10,13 +10,15 @@
 		A30428AB246B6222008E104C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428AA246B6222008E104C /* AppDelegate.swift */; };
 		A30428AD246B6222008E104C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428AC246B6222008E104C /* ViewController.swift */; };
 		A30428B0246B6222008E104C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30428AE246B6222008E104C /* Main.storyboard */; };
-		A30428B3246B6222008E104C /* MedPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A30428B1246B6222008E104C /* MedPlanner.xcdatamodeld */; };
 		A30428B5246B6228008E104C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30428B4246B6228008E104C /* Assets.xcassets */; };
 		A30428B8246B6228008E104C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30428B6246B6228008E104C /* LaunchScreen.storyboard */; };
 		A30428C3246B6229008E104C /* MedPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428C2246B6229008E104C /* MedPlannerTests.swift */; };
 		A30428CE246B6229008E104C /* MedPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428CD246B6229008E104C /* MedPlannerUITests.swift */; };
 		A30428E0246B6801008E104C /* PillsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428DF246B6801008E104C /* PillsTableViewController.swift */; };
 		A30428E2246B6CB6008E104C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30428E1246B6CB6008E104C /* SettingsViewController.swift */; };
+		A3236276246FC978007F1C3D /* MedPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3236274246FC978007F1C3D /* MedPlanner.xcdatamodeld */; };
+		A3236289246FDAFC007F1C3D /* Medications+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3236287246FDAFC007F1C3D /* Medications+CoreDataClass.swift */; };
+		A323628A246FDAFC007F1C3D /* Medications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3236288246FDAFC007F1C3D /* Medications+CoreDataProperties.swift */; };
 		A38E6747246C488F001E6E98 /* Pill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E6746246C488F001E6E98 /* Pill.swift */; };
 		A38E6749246C4E27001E6E98 /* images in Resources */ = {isa = PBXBuildFile; fileRef = A38E6748246C4E26001E6E98 /* images */; };
 		A38E674B246C7D0F001E6E98 /* PillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E674A246C7D0F001E6E98 /* PillDetailViewController.swift */; };
@@ -47,7 +49,6 @@
 		A30428AA246B6222008E104C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A30428AC246B6222008E104C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A30428AF246B6222008E104C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A30428B2246B6222008E104C /* MedPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MedPlanner.xcdatamodel; sourceTree = "<group>"; };
 		A30428B4246B6228008E104C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A30428B7246B6228008E104C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A30428B9246B6228008E104C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +60,9 @@
 		A30428CF246B6229008E104C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30428DF246B6801008E104C /* PillsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillsTableViewController.swift; sourceTree = "<group>"; };
 		A30428E1246B6CB6008E104C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A3236275246FC978007F1C3D /* MedPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MedPlanner.xcdatamodel; sourceTree = "<group>"; };
+		A3236287246FDAFC007F1C3D /* Medications+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medications+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		A3236288246FDAFC007F1C3D /* Medications+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medications+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		A38E6746246C488F001E6E98 /* Pill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill.swift; sourceTree = "<group>"; };
 		A38E6748246C4E26001E6E98 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		A38E674A246C7D0F001E6E98 /* PillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillDetailViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		A30428A9246B6222008E104C /* MedPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				A3236287246FDAFC007F1C3D /* Medications+CoreDataClass.swift */,
+				A3236288246FDAFC007F1C3D /* Medications+CoreDataProperties.swift */,
 				A38E6748246C4E26001E6E98 /* images */,
 				A30428AA246B6222008E104C /* AppDelegate.swift */,
 				A30428AC246B6222008E104C /* ViewController.swift */,
@@ -122,7 +128,7 @@
 				A30428B4246B6228008E104C /* Assets.xcassets */,
 				A30428B6246B6228008E104C /* LaunchScreen.storyboard */,
 				A30428B9246B6228008E104C /* Info.plist */,
-				A30428B1246B6222008E104C /* MedPlanner.xcdatamodeld */,
+				A3236274246FC978007F1C3D /* MedPlanner.xcdatamodeld */,
 				A38E6746246C488F001E6E98 /* Pill.swift */,
 				A30428DF246B6801008E104C /* PillsTableViewController.swift */,
 				A38E674A246C7D0F001E6E98 /* PillDetailViewController.swift */,
@@ -285,14 +291,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38E6747246C488F001E6E98 /* Pill.swift in Sources */,
+				A3236276246FC978007F1C3D /* MedPlanner.xcdatamodeld in Sources */,
 				A30428E0246B6801008E104C /* PillsTableViewController.swift in Sources */,
 				A3B510C6246E736500C3F633 /* PillsData.swift in Sources */,
-				A30428B3246B6222008E104C /* MedPlanner.xcdatamodeld in Sources */,
+				A3236289246FDAFC007F1C3D /* Medications+CoreDataClass.swift in Sources */,
 				A30428AD246B6222008E104C /* ViewController.swift in Sources */,
 				A38E674B246C7D0F001E6E98 /* PillDetailViewController.swift in Sources */,
 				A30428E2246B6CB6008E104C /* SettingsViewController.swift in Sources */,
 				A38E674D246C81AC001E6E98 /* PillTableViewCell.swift in Sources */,
 				A30428AB246B6222008E104C /* AppDelegate.swift in Sources */,
+				A323628A246FDAFC007F1C3D /* Medications+CoreDataProperties.swift in Sources */,
 				A3B510C8246E778E00C3F633 /* PillDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,12 +628,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A30428B1246B6222008E104C /* MedPlanner.xcdatamodeld */ = {
+		A3236274246FC978007F1C3D /* MedPlanner.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A30428B2246B6222008E104C /* MedPlanner.xcdatamodel */,
+				A3236275246FC978007F1C3D /* MedPlanner.xcdatamodel */,
 			);
-			currentVersion = A30428B2246B6222008E104C /* MedPlanner.xcdatamodel */;
+			currentVersion = A3236275246FC978007F1C3D /* MedPlanner.xcdatamodel */;
 			path = MedPlanner.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
