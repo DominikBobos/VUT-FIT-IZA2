@@ -14,7 +14,7 @@ enum PillState{
     //systémovy stav-liek sa este nenachadza v databaze
     case newPill
     // aktualny stav, liek ktory uz netreba uzivat/ liek ktory je treba uzit
-    case notInUse, inUse
+    case inUse
 }
 
 // Pill je castou modelu. Negeneruje ziadne udalosti

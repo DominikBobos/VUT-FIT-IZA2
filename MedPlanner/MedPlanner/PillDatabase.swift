@@ -17,7 +17,6 @@ class PillsDatabase {
     
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var fuckingSwift = [Medications]()
     
     static let ncMessage = Notification.Name("PillsDatabase:ping:toall")
     

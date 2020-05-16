@@ -22,6 +22,9 @@ class PillDetailViewController: UITableViewController {
     @IBOutlet var When: UITextField!
     @IBOutlet var State: UISwitch!
     
+    
+    private var datePicker: UIDatePicker?
+    private var timePicker: UIDatePicker?
  
     // ----------------------------------------------------------------
     // aktualizuje obsah objektu a notifikuje DB o zmene objektu
@@ -62,8 +65,52 @@ class PillDetailViewController: UITableViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @objc func startDateChanged(datePicker: UIDatePicker) {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "yyyy/MM/dd"
+        Start.text = dateFormat.string(from: datePicker.date)
+        view.endEditing(true)
+    }
+    
+    @objc func endDateChanged(datePicker: UIDatePicker) {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "yyyy/MM/dd"
+        End.text = dateFormat.string(from: datePicker.date)
+        view.endEditing(true)
+    }
+    
+    
+    @objc func timeChanged(timePicker: UIDatePicker) {
+        let timeFormat = DateFormatter()
+        timeFormat.dateFormat = "HH:mm"
+        When.text = timeFormat.string(from: timePicker.date)
+        view.endEditing(true)
+    }
+    
+    @objc func viewTap(gestureRecognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(viewTap(gestureRecognizer:)))
+        view.addGestureRecognizer(tap)
+        
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(startDateChanged(datePicker:)), for: .valueChanged)
+        Start.inputView = datePicker
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(endDateChanged(datePicker:)), for: .valueChanged)
+        End.inputView = datePicker
+        
+        timePicker = UIDatePicker()
+        timePicker?.datePickerMode = .time
+        timePicker?.addTarget(self, action: #selector(timeChanged(timePicker:)), for: .valueChanged)
+        When.inputView = timePicker
         
         PillImage.image = pill.showImage
         Name.text = pill.name
@@ -83,6 +130,7 @@ class PillDetailViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {
