@@ -102,7 +102,7 @@ class PillDetailViewController: UITableViewController {
         datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(startDateChanged(datePicker:)), for: .valueChanged)
         Start.inputView = datePicker
-        datePicker = UIDatePicker()
+        datePicker = UIDatePicker() // po trebne zresetovat nakolko by sa pouzil ten isty datum
         datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(endDateChanged(datePicker:)), for: .valueChanged)
         End.inputView = datePicker
