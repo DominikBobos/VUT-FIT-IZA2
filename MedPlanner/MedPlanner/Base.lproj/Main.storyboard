@@ -327,35 +327,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="68" id="h3j-Cg-aVU">
-                                        <rect key="frame" x="0.0" y="519" width="375" height="68"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h3j-Cg-aVU" id="oqV-55-0zD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="204" translatesAutoresizingMaskIntoConstraints="NO" id="npQ-do-MLs">
-                                                    <rect key="frame" x="10" y="18.5" width="355" height="31"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need to take" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-KU-lHF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="102" height="31"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XB0-f1-Dru">
-                                                            <rect key="frame" x="306" y="0.0" width="51" height="31"/>
-                                                        </switch>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="npQ-do-MLs" firstAttribute="centerY" secondItem="oqV-55-0zD" secondAttribute="centerY" id="4Pz-yg-Owo"/>
-                                                <constraint firstItem="npQ-do-MLs" firstAttribute="leading" secondItem="oqV-55-0zD" secondAttribute="leading" constant="10" id="AQr-3r-kgB"/>
-                                                <constraint firstItem="npQ-do-MLs" firstAttribute="centerX" secondItem="oqV-55-0zD" secondAttribute="centerX" id="ayB-oz-lyT"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -370,7 +341,6 @@
                         <outlet property="Name" destination="SwQ-BH-GoE" id="mmW-qf-nkE"/>
                         <outlet property="PillImage" destination="aMh-KO-bcm" id="2yj-t7-mjs"/>
                         <outlet property="Start" destination="kuZ-A5-eJ5" id="Iwt-p1-fsT"/>
-                        <outlet property="State" destination="XB0-f1-Dru" id="YHr-yO-6qB"/>
                         <outlet property="When" destination="sfq-Ah-Bdd" id="Umc-Tj-JAJ"/>
                     </connections>
                 </tableViewController>
@@ -410,6 +380,9 @@
                                                         </label>
                                                         <switch opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Orj-wt-446">
                                                             <rect key="frame" x="274" y="0.0" width="51" height="31"/>
+                                                            <connections>
+                                                                <action selector="SwitchChanged:" destination="znh-9f-6zk" eventType="valueChanged" id="HSG-dN-6TZ"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                 </stackView>

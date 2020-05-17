@@ -9,6 +9,30 @@
 import UIKit
 import CoreData
 
+public func validDate(start: String, end: String) -> Bool {
+    let date = Date()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy/MM/dd"
+    let startDate = dateFormatter.date(from: start) //can have nil
+    let endDate = dateFormatter.date(from: end)
+    
+    guard startDate != nil else {
+        guard endDate != nil else {
+            return true //no info about dates
+        }
+        if date > endDate!{
+            return false // dont want to be shown in active medications
+        } else {
+            return true // medications need to be taken
+        }
+    }
+    if (startDate! < date) && (date < endDate!) {
+        return true     // medications need to be taken
+    } else {
+        return false    // dont want to be shown in active medications
+    }
+}
+
 class StartViewController: UIViewController {
 
     @IBOutlet var TakenPills: UILabel!
@@ -25,7 +49,7 @@ class StartViewController: UIViewController {
         let currentTime = calendar.component(.hour, from: time)*60 + calendar.component(.minute, from: time)
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "HH:mm"
-        guard let pillDate =  timeFormatter.date(from: pillStr) else {
+        guard let pillDate = timeFormatter.date(from: pillStr) else {
             return true     // no time added - should take
         }
         let pillTime = calendar.component(.hour, from: pillDate)*60 + calendar.component(.minute, from: pillDate)
@@ -36,30 +60,6 @@ class StartViewController: UIViewController {
             return false    //was taken
         }
         
-    }
-    
-    private func validDate(start: String, end: String) -> Bool {
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd"
-        let startDate = dateFormatter.date(from: start) //can have nil
-        let endDate = dateFormatter.date(from: end)
-        
-        guard startDate != nil else {
-            guard endDate != nil else {
-                return true //no info about dates
-            }
-            if date > endDate!{
-                return false // dont want to be shown in active medications
-            } else {
-                return true // medications need to be taken
-            }
-        }
-        if (startDate! < date) && (date < endDate!) {
-            return true     // medications need to be taken
-        } else {
-            return false    // dont want to be shown in active medications
-        }
     }
     
     private func getContent() {

@@ -20,7 +20,7 @@ class PillDetailViewController: UITableViewController {
     @IBOutlet var Start: UITextField!
     @IBOutlet var End: UITextField!
     @IBOutlet var When: UITextField!
-    @IBOutlet var State: UISwitch!
+//    @IBOutlet var State: UISwitch!
     
     
     private var datePicker: UIDatePicker?
