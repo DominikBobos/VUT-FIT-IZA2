@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class PillsTableViewController: UITableViewController, PillsDSDelegate {
-//    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//    var fuckingSwift = [Medications]()
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
     var medications: [PillsDataSource] = []
     
@@ -29,15 +30,7 @@ class PillsTableViewController: UITableViewController, PillsDSDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        do {
-//            fuckingSwift = try context.fetch(Medications.fetchRequest())
-//        } catch let error as NSError {
-//            print ("Could not fetch. \(error), \(error.userInfo)")
-//        }
-//    }
+
     
     func reloadFrom(pillsDS: PillsDataSource) {
         tableView.reloadData()
@@ -48,19 +41,40 @@ class PillsTableViewController: UITableViewController, PillsDSDelegate {
                                  with: .automatic)
     }
     
-//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//
-//            medications.remove(at: indexPath.row)
-//            tableView.beginUpdates()
-//            tableView.deleteRows(at: [indexPath], with: .automatic)
-//            tableView.endUpdates()
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let removePillID =  medications[indexPath.section][indexPath.row].pillID
+            medications[indexPath.section].selection.remove(at: indexPath.row)
+            
+            let getData = NSFetchRequest<NSFetchRequestResult>(entityName: "Medications")
+            getData.returnsObjectsAsFaults = false
+            do {
+                let result = try context.fetch(getData)
+                for data in result as! [NSManagedObject] {
+                    let pillID = data.value(forKey: "pillID") as! String
+                    if pillID == removePillID {
+                        context.delete(data)
+                        break
+                    }
+                }
+            } catch {
+                print("Data Loading Failed")
+            }
+            appDelegate.saveContext()
+            do  {
+               try context.save()
+            } catch {
+               print ("Failed saving data")
+            }
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -157,7 +171,7 @@ class PillsTableViewController: UITableViewController, PillsDSDelegate {
             let _dest = segue.destination as? PillDetailViewController
         {
             //
-            _dest.pill = Pill(newPill: "", start: "", end: "", when: "")
+            _dest.pill = Pill(newPill: "", start: "", end: "", when: "", id: "")
         }
     }
  

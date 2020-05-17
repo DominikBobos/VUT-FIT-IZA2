@@ -31,12 +31,13 @@ class SettingsViewController: UITableViewController {
             if let notificationID = defaults.stringArray(forKey: "notificationID") {
                 center.removePendingNotificationRequests(withIdentifiers: notificationID)
             }
+            defaults.removeObject(forKey: "notificationID")
         }
         
     }
     
     
-    public func NotificationsTrigger() {
+    func NotificationsTrigger() {
         let center = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
         var notificationID: [String] = []
@@ -82,6 +83,7 @@ class SettingsViewController: UITableViewController {
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         if defaults.bool(forKey: "notificationSetting") {
+            
             NotificationSwitch.isOn = true
         } else {
             NotificationSwitch.isOn = false

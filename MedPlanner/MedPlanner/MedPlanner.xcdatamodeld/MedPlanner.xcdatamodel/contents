@@ -4,9 +4,10 @@
         <attribute name="dateBegin" attributeType="String"/>
         <attribute name="dateEnd" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
+        <attribute name="pillID" attributeType="String"/>
         <attribute name="whenTake" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Medications" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Medications" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

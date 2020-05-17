@@ -10,10 +10,8 @@ import UIKit
 
 class PillDetailViewController: UITableViewController {
 
-    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var pill: Pill!
-    
+    var pillID: [String] = []
     
     @IBOutlet var PillImage: UIImageView!
     @IBOutlet var Name: UITextField!
@@ -33,28 +31,12 @@ class PillDetailViewController: UITableViewController {
         if let _name = Name.text, let _start = Start.text,
             let _end = End.text, let _when = When.text{//}, let _state = State {
             //
+            
             pill.name = _name
             pill.dateBegin = _start
             pill.dateEnd = _end
             pill.whenTake = _when
-            
-            let fkinSwift = Medications(entity: Medications.entity(), insertInto: context)
-            fkinSwift.name = _name
-            fkinSwift.dateBegin = _start
-            fkinSwift.dateEnd = _end
-            fkinSwift.whenTake = _when
-            appDelegate.saveContext()
-            do  {
-                try context.save()
-            } catch {
-                print ("Failed saving data")
-            }
-//            if (_state.isOn) {
-//                pill.state = .inUse
-//            } else {
-//                pill.state = .notInUse
-//            }
-            
+
             //
             AppDelegate.shared.pillsDatabase.updated(setNew: pill)
         }

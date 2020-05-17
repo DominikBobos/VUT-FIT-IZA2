@@ -13,25 +13,24 @@ import UIKit
 enum PillState{
     //systémovy stav-liek sa este nenachadza v databaze
     case newPill
-    // aktualny stav, liek ktory uz netreba uzivat/ liek ktory je treba uzit
+    // liek ktory je stale potrebne uzivat
     case inUse
+    // liek ktory sa zmaze zo zoznamu
+    case willRemove
 }
 
 // Pill je castou modelu. Negeneruje ziadne udalosti
 class Pill {
-    
+    var pillID: String
     var name: String                //nazov lieku
     var dateBegin: String             // pociatocny datum uzivania
     var dateEnd: String               // konecny datum uzivania
     var whenTake: String              // kedy je potrebne liek uzit
     var state: PillState = .newPill
-    let pillImage: UIImage? = nil   // tvar a typ lieku
+    let pillImage: UIImage? = nil  // tvar a typ lieku
     
-    static let __imageDefault = UIImage(named: "images/defaultPill.png")!
-    
-    //aby sa vzdy zobrazil nejaky obrazok
     var showImage: UIImage {
-        guard let _giveImage = pillImage else { return Pill.__imageDefault}
+        let _giveImage = UIImage(named: "images/defaultPill.png")!
         return _giveImage
     }
     
@@ -40,26 +39,30 @@ class Pill {
     init(newPill name: String,
          start dateBegin: String,
          end dateEnd: String,
-         when whenTake: String)
+         when whenTake: String,
+         id pillID: String)
     {
         self.state = .newPill
         self.name = name
         self.dateBegin = dateBegin
         self.dateEnd = dateEnd
         self.whenTake = whenTake
+        self.pillID = pillID
     }
         //liek nacitany z DB
     init(dbPill name: String,
          dateBegin: String,
          dateEnd: String,
          whenTake: String,
-         state: PillState)
+         state: PillState,
+         pillID: String)
     {
         self.state = state
         self.name = name
         self.dateBegin = dateBegin
         self.dateEnd = dateEnd
         self.whenTake = whenTake
+        self.pillID = pillID
     }
     
     
