@@ -2,7 +2,7 @@
 //  Medications+CoreDataProperties.swift
 //  MedPlanner
 //
-//  Created by Dominik Boboš on 17/05/2020.
+//  Created by Dominik Boboš on 18/05/2020.
 //  Copyright © 2020 Dominik Boboš. All rights reserved.
 //
 //
@@ -20,7 +20,7 @@ extension Medications {
     @NSManaged public var dateBegin: String?
     @NSManaged public var dateEnd: String?
     @NSManaged public var name: String?
-    @NSManaged public var whenTake: String?
     @NSManaged public var pillID: String?
+    @NSManaged public var whenTake: String?
 
 }
