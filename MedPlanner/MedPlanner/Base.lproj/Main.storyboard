@@ -157,12 +157,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="MEDICATION LIST" id="FgE-G4-eNf">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="yCf-VU-hLc">
+                            <connections>
+                                <action selector="editAction:" destination="UjA-pN-iHN" id="Udu-X1-3Pz"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lOs-zo-cqT">
                             <connections>
                                 <segue destination="6cu-Jc-P8w" kind="show" identifier="addNew" id="5Ua-xb-1rM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="yCf-VU-hLc" id="6cs-BS-Gvg"/>
+                        <outlet property="pillView" destination="QfO-eD-oC7" id="g3X-6S-Gt4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbt-AG-ZQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

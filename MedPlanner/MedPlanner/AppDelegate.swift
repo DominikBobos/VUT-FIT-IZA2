@@ -15,10 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     var window: UIWindow?
     
+    //k nacitaniu obsahu databazy
     fileprivate var __pillsDatabase: PillsDatabase!
-    
     var pillsDatabase: PillsDatabase { return __pillsDatabase }
 
+    // vytvorenie AppDelegate na handlovanie systemovych eventov
     static var shared: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
@@ -27,9 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         __pillsDatabase = PillsDatabase()
         DispatchQueue.global().async {
-            self.__pillsDatabase.gtLoadContent()
+            self.__pillsDatabase.loadContent()
         }
-        // ziadost o udelenie opravneni k pristupovaniu k upozorneniam
+        // ziadost o udelenie opravnenia k pristupovaniu k uzivatelskym upozorneniam
         let center = UNUserNotificationCenter.current()
         let options: UNAuthorizationOptions = [.sound, .alert, .badge]
         center.requestAuthorization(options: options) { (granted, error) in
@@ -46,18 +47,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // tesne pred ukoncenim aplikacie sa ulozi Context
+        // tesne pred ukoncenim aplikacie sa zavola saveContext na ulozenie dat do CD
         self.saveContext()
     }
 
-    // vytvorenie persistent container, ku ktoremu mozem potom pristupovat z hocijakej triedy
+    // vytvorenie a vratenie persistent container, ku ktoremu mozem potom pristupovat z hocijakej triedy
     lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
         let container = NSPersistentContainer(name: "MedPlanner")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -66,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         })
         return container
     }()
-    // MARK: - Core Data Saving support
+    // ulozi data do CoreData
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
